@@ -558,9 +558,230 @@
             border: 1px solid rgba(0, 212, 255, 0.3);
         }
 
-        /* Education Section */
-        .education {
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
+        /* Project Details Page */
+        .project-details-page {
+            display: none;
+            min-height: 100vh;
+            background: radial-gradient(ellipse at center, #1a1a2e 0%, #0a0a0a 70%);
+            padding: 100px 0 50px 0;
+        }
+
+        .project-details-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .project-details-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .project-details-title {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff 0%, #00d4ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .project-details-subtitle {
+            font-size: 1.2rem;
+            color: #cccccc;
+            margin-bottom: 2rem;
+        }
+
+        .project-details-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .project-info {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .project-info h3 {
+            color: #00d4ff;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-info p {
+            color: #cccccc;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .project-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .project-features li {
+            background: rgba(0, 212, 255, 0.1);
+            margin-bottom: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            border-left: 3px solid #00d4ff;
+        }
+
+        .project-screenshots {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .screenshot-container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 1rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .screenshot-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.2);
+        }
+
+        .screenshot {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d2d3a 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #cccccc;
+            font-size: 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .screenshot::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(45deg, transparent 40%, rgba(0, 212, 255, 0.1) 50%, transparent 60%),
+                repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px);
+        }
+
+        .screenshot-title {
+            margin-top: 1rem;
+            color: #ffffff;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .project-tech-stack {
+            margin-top: 2rem;
+        }
+
+        .project-tech-stack h4 {
+            color: #00d4ff;
+            margin-bottom: 1rem;
+        }
+
+        .tech-stack-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 1rem;
+        }
+
+        .tech-item {
+            background: rgba(0, 212, 255, 0.1);
+            padding: 0.5rem;
+            border-radius: 10px;
+            text-align: center;
+            color: #00d4ff;
+            font-size: 0.9rem;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        /* Editable Resume Styles */
+        .resume-edit-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #00d4ff 0%, #ff0080 100%);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .resume-edit-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+        }
+
+        .editable {
+            border: 2px dashed rgba(0, 212, 255, 0.5);
+            border-radius: 5px;
+            padding: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .editable:hover {
+            background: rgba(0, 212, 255, 0.05);
+        }
+
+        .editable:focus {
+            outline: none;
+            border-color: #00d4ff;
+            background: rgba(0, 212, 255, 0.1);
+        }
+
+        .save-resume {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .save-button {
+            background: linear-gradient(135deg, #00d4ff 0%, #ff0080 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            display: none;
+        }
+
+        .save-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+        }
+
+        /* Remove zoom effect from resume */
+        .resume-3d {
+            transform: none !important;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .resume-3d:hover {
+            transform: none !important;
+            box-shadow: 0 25px 50px rgba(0, 212, 255, 0.3);
         }
 
         .education-card {
@@ -1061,68 +1282,209 @@
         </section>
     </div>
 
+    <!-- Project Details Pages -->
+    <div id="projectDetailsPage" class="project-details-page">
+        <button class="back-button" onclick="showPortfolio()">← Back to Portfolio</button>
+        <div class="project-details-container">
+            <!-- Movie Flex Project Details -->
+            <div id="movieflexDetails" class="project-details" style="display: none;">
+                <div class="project-details-header">
+                    <h1 class="project-details-title">Movie Flex Website</h1>
+                    <p class="project-details-subtitle">Private Movie Show Booking Platform</p>
+                </div>
+
+                <div class="project-details-content">
+                    <div class="project-info">
+                        <h3>🎬 Project Overview</h3>
+                        <p>Movie Flex is an interactive website designed for private movie screening bookings. The platform provides a seamless experience for users to book private movie shows with a focus on user-friendly interface and robust backend functionality.</p>
+
+                        <h3>✨ Key Features</h3>
+                        <ul class="project-features">
+                            <li>🎫 Private movie screening booking system</li>
+                            <li>👤 User authentication and profile management</li>
+                            <li>📅 Real-time show scheduling and availability</li>
+                            <li>💳 Secure payment integration</li>
+                            <li>📱 Responsive design for all devices</li>
+                            <li>📊 Admin dashboard for management</li>
+                            <li>🔄 Object-oriented PHP architecture</li>
+                        </ul>
+
+                        <div class="project-tech-stack">
+                            <h4>🛠️ Technology Stack</h4>
+                            <div class="tech-stack-grid">
+                                <div class="tech-item">HTML5</div>
+                                <div class="tech-item">CSS3</div>
+                                <div class="tech-item">JavaScript</div>
+                                <div class="tech-item">PHP</div>
+                                <div class="tech-item">MySQL</div>
+                                <div class="tech-item">OOP</div>
+                                <div class="tech-item">Bootstrap</div>
+                                <div class="tech-item">jQuery</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-screenshots">
+                        <div class="screenshot-container">
+                            <div class="screenshot">
+                                📱 Homepage Screenshot<br>
+                                <small>Modern landing page with movie listings<br>and booking interface</small>
+                            </div>
+                            <div class="screenshot-title">Homepage - Movie Listings</div>
+                        </div>
+
+                        <div class="screenshot-container">
+                            <div class="screenshot">
+                                🎫 Booking Interface<br>
+                                <small>Interactive seat selection and<br>booking confirmation system</small>
+                            </div>
+                            <div class="screenshot-title">Booking System Interface</div>
+                        </div>
+
+                        <div class="screenshot-container">
+                            <div class="screenshot">
+                                👨‍💼 Admin Dashboard<br>
+                                <small>Comprehensive management panel<br>for movies, bookings, and users</small>
+                            </div>
+                            <div class="screenshot-title">Admin Management Panel</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sentiment Analysis Project Details -->
+            <div id="sentimentDetails" class="project-details" style="display: none;">
+                <div class="project-details-header">
+                    <h1 class="project-details-title">Advanced Sentiment Analysis</h1>
+                    <p class="project-details-subtitle">LLMs & Dependency Parsing for Multi-Aspect Classification</p>
+                </div>
+
+                <div class="project-details-content">
+                    <div class="project-info">
+                        <h3>🧠 Project Overview</h3>
+                        <p>An advanced sentiment analysis framework that integrates Large Language Models (LLMs) with dependency parsing for more accurate multi-aspect sentiment classification. The system uses cutting-edge NLP techniques to analyze restaurant reviews with high precision.</p>
+
+                        <h3>🚀 Key Features</h3>
+                        <ul class="project-features">
+                            <li>🤖 LLM integration with dependency parsing</li>
+                            <li>📊 Multi-aspect sentiment classification</li>
+                            <li>🔄 Data augmentation techniques</li>
+                            <li>⚔️ Adversarial sample generation</li>
+                            <li>🎯 Contrastive learning implementation</li>
+                            <li>⚡ LoRA fine-tuning on LLaMA models</li>
+                            <li>🍽️ Domain-specific restaurant review analysis</li>
+                            <li>📈 Enhanced model generalization</li>
+                        </ul>
+
+                        <div class="project-tech-stack">
+                            <h4>🛠️ Technology Stack</h4>
+                            <div class="tech-stack-grid">
+                                <div class="tech-item">Python</div>
+                                <div class="tech-item">PyTorch</div>
+                                <div class="tech-item">SpaCy</div>
+                                <div class="tech-item">Transformers</div>
+                                <div class="tech-item">LLaMA</div>
+                                <div class="tech-item">LoRA</div>
+                                <div class="tech-item">NumPy</div>
+                                <div class="tech-item">Pandas</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-screenshots">
+                        <div class="screenshot-container">
+                            <div class="screenshot">
+                                📊 Model Architecture<br>
+                                <small>LLM + Dependency Parsing<br>Integration Diagram</small>
+                            </div>
+                            <div class="screenshot-title">System Architecture Overview</div>
+                        </div>
+
+                        <div class="screenshot-container">
+                            <div class="screenshot">
+                                📈 Performance Metrics<br>
+                                <small>Accuracy, Precision, Recall<br>and F1-Score Visualizations</small>
+                            </div>
+                            <div class="screenshot-title">Model Performance Dashboard</div>
+                        </div>
+
+                        <div class="screenshot-container">
+                            <div class="screenshot">
+                                🔍 Aspect Classification<br>
+                                <small>Multi-aspect sentiment analysis<br>results for restaurant reviews</small>
+                            </div>
+                            <div class="screenshot-title">Sentiment Analysis Results</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Resume Page -->
     <div id="resumePage" class="resume-page">
         <button class="back-button" onclick="showPortfolio()">← Back to Portfolio</button>
         <div class="resume-container">
             <div class="resume-3d">
+                <button class="resume-edit-toggle" onclick="toggleEdit()">✏️ Edit Mode</button>
+                
                 <div class="resume-header">
-                    <div class="resume-name">Nandacumaar</div>
-                    <div class="resume-title">Software Developer & Full-Stack Engineer</div>
+                    <div class="resume-name" contenteditable="false">Nandacumaar</div>
+                    <div class="resume-title" contenteditable="false">Software Developer & Full-Stack Engineer</div>
                     <div class="resume-contact">
-                        <span>📍 Pondicherry</span>
-                        <span>📞 6384569404</span>
-                        <span>📧 nandacumaars@gmail.com</span>
-                        <span>💼 linkedin.com/in/nandacumaar</span>
-                        <span>🐙 github.com/nan455</span>
+                        <span contenteditable="false">📍 Pondicherry</span>
+                        <span contenteditable="false">📞 6384569404</span>
+                        <span contenteditable="false">📧 nandacumaars@gmail.com</span>
+                        <span contenteditable="false">💼 linkedin.com/in/nandacumaar</span>
+                        <span contenteditable="false">🐙 github.com/nan455</span>
                     </div>
                 </div>
 
                 <div class="resume-section">
                     <h3>Professional Summary</h3>
-                    <p>Enthusiastic and self-motivated Software Developer with a strong foundation in computer science and extensive experience in backend and full-stack development. Adept at creating dynamic, user-friendly applications and solutions with a focus on quality, performance, and maintainability. Passionate about utilizing coding expertise in Python, Java, and web technologies, AI tools to contribute effectively to team goals and organizational success.</p>
+                    <p contenteditable="false">Enthusiastic and self-motivated Software Developer with a strong foundation in computer science and extensive experience in backend and full-stack development. Adept at creating dynamic, user-friendly applications and solutions with a focus on quality, performance, and maintainability. Passionate about utilizing coding expertise in Python, Java, and web technologies, AI tools to contribute effectively to team goals and organizational success.</p>
                 </div>
 
                 <div class="resume-grid">
                     <div class="resume-section">
                         <h3>Technical Skills</h3>
-                        <p><strong>Languages:</strong> Python, Java, JavaScript, HTML, CSS, SQL</p>
-                        <p><strong>Frameworks:</strong> React.js, Node.js, ASP.NET</p>
-                        <p><strong>Tools:</strong> Git, GitHub, REST APIs, Postman, MVC</p>
-                        <p><strong>Cloud:</strong> Microsoft Azure (learning)</p>
-                        <p><strong>Specialties:</strong> Data Structures & Algorithms</p>
+                        <p contenteditable="false"><strong>Languages:</strong> Python, Java, JavaScript, HTML, CSS, SQL</p>
+                        <p contenteditable="false"><strong>Frameworks:</strong> React.js, Node.js, ASP.NET</p>
+                        <p contenteditable="false"><strong>Tools:</strong> Git, GitHub, REST APIs, Postman, MVC</p>
+                        <p contenteditable="false"><strong>Cloud:</strong> Microsoft Azure (learning)</p>
+                        <p contenteditable="false"><strong>Specialties:</strong> Data Structures & Algorithms</p>
                     </div>
 
                     <div class="resume-section">
                         <h3>Languages</h3>
-                        <p><strong>English:</strong> Fluent</p>
-                        <p><strong>Tamil:</strong> Fluent</p>
+                        <p contenteditable="false"><strong>English:</strong> Fluent</p>
+                        <p contenteditable="false"><strong>Tamil:</strong> Fluent</p>
                         <br>
                         <h3>Certifications</h3>
-                        <p>• Programming in Python - SWAYAM's NPTEL</p>
-                        <p>• Enhancing Soft Skills and Personality</p>
+                        <p contenteditable="false">• Programming in Python - SWAYAM's NPTEL</p>
+                        <p contenteditable="false">• Enhancing Soft Skills and Personality</p>
                     </div>
                 </div>
 
                 <div class="resume-section">
                     <h3>Professional Experience</h3>
                     <div style="margin-bottom: 1.5rem;">
-                        <p><strong>Web Development Intern</strong> - Cherri Technologics</p>
-                        <p style="color: #666; font-size: 0.9rem;">May 2025 – July 2025</p>
+                        <p contenteditable="false"><strong>Web Development Intern</strong> - Cherri Technologics</p>
+                        <p style="color: #666; font-size: 0.9rem;" contenteditable="false">May 2025 – July 2025</p>
                         <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
-                            <li>Built and maintained backend systems using PHP & MySQL for 4+ live web projects</li>
-                            <li>Integrated HTML, CSS, Bootstrap, and React front-end features with server-side logic</li>
-                            <li>Managed hosting and deployment via cPanel & FTP</li>
-                            <li>Strengthened expertise in SQL/MySQL database design and optimization</li>
+                            <li contenteditable="false">Built and maintained backend systems using PHP & MySQL for 4+ live web projects</li>
+                            <li contenteditable="false">Integrated HTML, CSS, Bootstrap, and React front-end features with server-side logic</li>
+                            <li contenteditable="false">Managed hosting and deployment via cPanel & FTP</li>
+                            <li contenteditable="false">Strengthened expertise in SQL/MySQL database design and optimization</li>
                         </ul>
                     </div>
                     <div>
-                        <p><strong>Full Stack Developer</strong> - Zeal Zoft Private Limited</p>
-                        <p style="color: #666; font-size: 0.9rem;">May 2024 - July 2024</p>
+                        <p contenteditable="false"><strong>Full Stack Developer</strong> - Zeal Zoft Private Limited</p>
+                        <p style="color: #666; font-size: 0.9rem;" contenteditable="false">May 2024 - July 2024</p>
                         <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
-                            <li>Designed and implemented dynamic web applications using HTML, CSS, JavaScript, Node.js, React.js, and PHP</li>
-                            <li>Engaged in the full software development lifecycle from requirements gathering to deployment</li>
-                            <li>Worked closely with clients to define project specifications and deliver exceptional results</li>
+                            <li contenteditable="false">Designed and implemented dynamic web applications using HTML, CSS, JavaScript, Node.js, React.js, and PHP</li>
+                            <li contenteditable="false">Engaged in the full software development lifecycle from requirements gathering to deployment</li>
+                            <li contenteditable="false">Worked closely with clients to define project specifications and deliver exceptional results</li>
                         </ul>
                     </div>
                 </div>
@@ -1130,25 +1492,29 @@
                 <div class="resume-section">
                     <h3>Key Projects</h3>
                     <div style="margin-bottom: 1.5rem;">
-                        <p><strong>Movie Flex Website Development</strong></p>
-                        <p>Created an interactive website for private movie screening bookings using HTML, CSS, JavaScript, PHP (with OOP principles), and MySQL. Implemented modular, object-oriented PHP code for better code organization, reusability, and scalability.</p>
+                        <p contenteditable="false"><strong>Movie Flex Website Development</strong></p>
+                        <p contenteditable="false">Created an interactive website for private movie screening bookings using HTML, CSS, JavaScript, PHP (with OOP principles), and MySQL. Implemented modular, object-oriented PHP code for better code organization, reusability, and scalability.</p>
                     </div>
                     <div>
-                        <p><strong>Enhancing Aspect-Based Sentiment Analysis Using LLMs</strong></p>
-                        <p>Developed an advanced sentiment analysis framework that integrates Large Language Models (LLMs) with dependency parsing for more accurate multi-aspect sentiment classification. Utilized LoRA fine-tuning on LLaMA models and implemented data augmentation techniques.</p>
+                        <p contenteditable="false"><strong>Enhancing Aspect-Based Sentiment Analysis Using LLMs</strong></p>
+                        <p contenteditable="false">Developed an advanced sentiment analysis framework that integrates Large Language Models (LLMs) with dependency parsing for more accurate multi-aspect sentiment classification. Utilized LoRA fine-tuning on LLaMA models and implemented data augmentation techniques.</p>
                     </div>
                 </div>
 
                 <div class="resume-section">
                     <h3>Education</h3>
-                    <p><strong>B.Tech in Computer Science Engineering</strong></p>
-                    <p>Puducherry Technological University</p>
-                    <p style="color: #666;">Graduated: May 2025</p>
+                    <p contenteditable="false"><strong>B.Tech in Computer Science Engineering</strong></p>
+                    <p contenteditable="false">Puducherry Technological University</p>
+                    <p style="color: #666;" contenteditable="false">Graduated: May 2025</p>
                 </div>
 
                 <div class="resume-section">
                     <h3>Hobbies & Interests</h3>
-                    <p>Problem Solving • Coding • Gym • Cricket</p>
+                    <p contenteditable="false">Problem Solving • Coding • Gym • Cricket</p>
+                </div>
+
+                <div class="save-resume">
+                    <button class="save-button" onclick="saveResume()">💾 Save Changes</button>
                 </div>
             </div>
         </div>
@@ -1315,8 +1681,16 @@
             typeWriter();
         }, 1800);
 
-        // 3D tilt effect for resume
-       
+        // Remove 3D tilt effect for resume - commented out
+        // const resume3d = document.querySelector('.resume-3d');
+        // if (resume3d) {
+        //     resume3d.addEventListener('mousemove', (e) => {
+        //         // Removed 3D tilt effect as requested
+        //     });
+        //     resume3d.addEventListener('mouseleave', () => {
+        //         // Removed 3D tilt effect as requested  
+        //     });
+        // }
     </script>
 </body>
 </html>
